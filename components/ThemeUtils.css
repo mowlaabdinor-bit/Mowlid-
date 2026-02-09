@@ -1,0 +1,39 @@
+/* Services Page Glow */
+.theme-glow-services {
+    --page-glow: 160, 50, 255;
+    /* Purple for Dark Mode */
+}
+
+/* About Page Glow */
+.theme-glow-about {
+    --page-glow: 0, 255, 157;
+    /* Green for Dark Mode */
+}
+
+/* Contact Page Glow */
+.theme-glow-contact {
+    --page-glow: 59, 130, 246;
+    /* Blue for Dark Mode */
+}
+
+/* Light Mode Overrides - Uniform Green Glow */
+/* Use :root:not(.dark) or specific selector if .dark is on html/body */
+@media (prefers-color-scheme: light) {
+    /* Default to green if system is light and no class present */
+    /* But our app uses .dark class strategy usually */
+}
+
+/* When the app is NOT in dark mode (Light Mode), force Green Glow for all Bento cards */
+:root:not(.dark) .theme-glow-services,
+:root:not(.dark) .theme-glow-about,
+:root:not(.dark) .theme-glow-contact {
+    --page-glow: 0, 255, 157;
+    /* Site Brand Green */
+}
+
+/* Explicitly handle the .dark class absence if that's how theme toggle works */
+html:not(.dark) .theme-glow-services,
+html:not(.dark) .theme-glow-about,
+html:not(.dark) .theme-glow-contact {
+    --page-glow: 0, 255, 157;
+}

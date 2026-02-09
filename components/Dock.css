@@ -1,0 +1,94 @@
+.dock-outer {
+    margin: 0 0.5rem;
+    display: flex;
+    max-width: 100%;
+    align-items: center;
+}
+
+.dock-panel {
+    position: fixed;
+    top: 0.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    gap: 0.75rem;
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 0.75rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    z-index: 100;
+}
+
+.dark .dock-panel {
+    background-color: rgba(15, 23, 42, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.dock-item {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #10b981, #3b82f6);
+    border: none;
+    box-shadow:
+        0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    outline: none;
+    transition: box-shadow 0.2s ease;
+}
+
+.dock-item:hover {
+    box-shadow:
+        0 10px 25px -5px rgba(16, 185, 129, 0.4),
+        0 8px 10px -6px rgba(59, 130, 246, 0.3);
+}
+
+.dock-item:focus-visible {
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.5);
+}
+
+.dock-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.dock-label {
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    width: fit-content;
+    white-space: pre;
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #1f2937;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dark .dock-label {
+    background-color: rgba(30, 41, 59, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #f1f5f9;
+}
+
+/* Hide dock on mobile - show traditional nav instead */
+@media (max-width: 768px) {
+    .dock-panel {
+        display: none;
+    }
+}
