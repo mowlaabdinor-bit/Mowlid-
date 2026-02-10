@@ -1,8 +1,10 @@
 import HeroSection from '@/components/HeroSection'
 import ServicesPreview from '@/components/ServicesPreview'
 import AboutPreview from '@/components/AboutPreview'
+import { unstable_setRequestLocale } from 'next-intl/server';
 
-export default function Home() {
+export default function Home({ params: { locale } }: { params: { locale: string } }) {
+  unstable_setRequestLocale(locale);
   return (
     <div className="flex flex-col">
       <HeroSection />
