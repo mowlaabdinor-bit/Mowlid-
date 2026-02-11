@@ -1,4 +1,5 @@
-import { NextIntlClientProvider, useMessages } from 'next-intl';
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import Script from 'next/script';
 import { Metadata } from 'next';
@@ -55,12 +56,12 @@ export const metadata: Metadata = {
 // Can be imported from a shared config
 const locales = ['en', 'tr'];
 
-export default function LocaleLayout({ children, params: { locale } }: { children: React.ReactNode, params: { locale: string } }) {
+export default async function LocaleLayout({ children, params: { locale } }: { children: React.ReactNode, params: { locale: string } }) {
     // Validate that the incoming `locale` parameter is valid
     if (!locales.includes(locale as any)) notFound();
 
     // Receive messages provided in `i18n.ts` or loaded manually
-    const messages = useMessages();
+    const messages = await getMessages();
 
     return (
         <html lang={locale}>
