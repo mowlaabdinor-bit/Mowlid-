@@ -1,5 +1,12 @@
 {
     "Index": {
         "title": "Mowla Web'e Hosgeldiniz"
+    },
+    "nav": {
+        "home": "Anasayfa",
+        "services": "Hizmetler",
+        "about": "Hakkımızda",
+        "contact": "İletişim",
+        "getQuote": "Teklif Al"
     }
 }

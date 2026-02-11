@@ -1,5 +1,12 @@
 {
     "Index": {
         "title": "Welcome to Mowla Web"
+    },
+    "nav": {
+        "home": "Home",
+        "services": "Services",
+        "about": "About",
+        "contact": "Contact",
+        "getQuote": "Get Quote"
     }
 }

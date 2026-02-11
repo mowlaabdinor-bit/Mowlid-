@@ -1,5 +1,5 @@
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, unstable_setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import Script from 'next/script';
 import { Metadata } from 'next';
@@ -56,11 +56,8 @@ export const metadata: Metadata = {
 // Can be imported from a shared config
 const locales = ['en', 'tr'];
 
-export function generateStaticParams() {
-    return locales.map((locale) => ({ locale }));
-}
-
 export default async function LocaleLayout({ children, params: { locale } }: { children: React.ReactNode, params: { locale: string } }) {
+    unstable_setRequestLocale(locale);
     // Validate that the incoming `locale` parameter is valid
     if (!locales.includes(locale as any)) notFound();
 
