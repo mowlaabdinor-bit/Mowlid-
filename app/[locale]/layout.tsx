@@ -1,68 +1,36 @@
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, unstable_setRequestLocale } from 'next-intl/server';
+import { NextIntlClientProvider, useMessages } from 'next-intl';
 import { notFound } from 'next/navigation';
-import { locales } from '@/i18n';
-import { Inter, Poppins } from 'next/font/google'
-import '../globals.css'
-import Footer from '@/components/Footer'
-import { ThemeProvider } from '@/components/ThemeContext'
-import DockNavigation from '@/components/DockNavigation'
-import Navigation from '@/components/Navigation'
-import Logo from '@/components/Logo'
+import Script from 'next/script';
 
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
-})
+// Can be imported from a shared config
+const locales = ['en', 'tr'];
 
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
-  variable: '--font-poppins',
-  display: 'swap',
-})
+export default function LocaleLayout({ children, params: { locale } }: { children: React.ReactNode, params: { locale: string } }) {
+    // Validate that the incoming `locale` parameter is valid
+    if (!locales.includes(locale as any)) notFound();
 
-export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
-}
+    // Receive messages provided in `i18n.ts` or loaded manually
+    const messages = useMessages();
 
-export default async function LocaleLayout({
-  children,
-  params: { locale }
-}: {
-  children: React.ReactNode;
-  params: { locale: string };
-}) {
-  unstable_setRequestLocale(locale);
-  if (!locales.includes(locale as any)) {
-    notFound();
-  }
-
-  const messages = await getMessages();
-
-  return (
-    <html lang={locale} className={`${inter.variable} ${poppins.variable}`} suppressHydrationWarning>
-      <body className="font-sans antialiased bg-gray-100 dark:bg-dark-900 transition-colors duration-300">
-        <ThemeProvider>
-          <NextIntlClientProvider messages={messages}>
-            {/* Mobile Navigation - visible only on small screens */}
-            <div className="md:hidden">
-              <Navigation />
-            </div>
-            {/* Logo - now responsive for all screens */}
-            <Logo />
-            <main className="min-h-screen">
-              {children}
-            </main>
-            <Footer />
-            {/* Desktop Dock - visible only on medium+ screens */}
-            <div className="hidden md:block">
-              <DockNavigation />
-            </div>
-          </NextIntlClientProvider>
-        </ThemeProvider>
-      </body>
-    </html>
-  )
+    return (
+        <html lang={locale}>
+            <body>
+                <Script
+                    src="https://www.googletagmanager.com/gtag/js?id=G-8CET5EKJPS"
+                    strategy="afterInteractive"
+                />
+                <Script id="google-analytics" strategy="afterInteractive">
+                    {`
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', 'G-8CET5EKJPS');
+                    `}
+                </Script>
+                <NextIntlClientProvider locale={locale} messages={messages}>
+                    {children}
+                </NextIntlClientProvider>
+            </body>
+        </html>
+    );
 }
