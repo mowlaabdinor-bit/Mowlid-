@@ -1,6 +1,6 @@
 {
     "Index": {
-        "title": "Mowla Web'e Hosgeldiniz"
+        "title": "Mowla Web'e Hoşgeldiniz"
     },
     "nav": {
         "home": "Anasayfa",
@@ -8,5 +8,177 @@
         "about": "Hakkımızda",
         "contact": "İletişim",
         "getQuote": "Teklif Al"
+    },
+    "hero": {
+        "title": "Dijital Deneyimler",
+        "titleHighlight": "İnşa Ediyoruz",
+        "subtitle": "İşletmeniz için modern web ve mobil çözümler",
+        "description": "Konseptten lansmana kadar, sonuç odaklı ve kullanıcıları memnun eden dijital ürünler oluşturuyoruz.",
+        "cta1": "Proje Başlat",
+        "cta2": "Daha Fazla"
+    },
+    "servicesPreview": {
+        "web": "Web Geliştirme",
+        "mobile": "Mobil Uygulamalar",
+        "maintenance": "Bakım",
+        "marketing": "Dijital Pazarlama"
+    },
+    "services": {
+        "title": "Hizmetlerimiz",
+        "subtitle": "İhtiyaçlarınıza göre özelleştirilmiş kapsamlı dijital çözümler",
+        "viewAll": "Tüm Hizmetleri Gör",
+        "web": {
+            "title": "Web Geliştirme",
+            "description": "En son teknolojilerle oluşturulan modern ve duyarlı web siteleri"
+        },
+        "mobile": {
+            "title": "Mobil Uygulamalar",
+            "description": "iOS ve Android için çapraz platform mobil uygulamalar"
+        },
+        "maintenance": {
+            "title": "Hata Düzeltme & Bakım",
+            "description": "Düzenli güncellemelerle uygulamalarınızı sorunsuz çalıştırın"
+        },
+        "marketing": {
+            "title": "Dijital Pazarlama",
+            "description": "Hedefli pazarlama stratejileriyle çevrimiçi varlığınızı büyütün"
+        },
+        "list": {
+            "web": {
+                "title": "Web Geliştirme",
+                "desc": "React, Next.js ve daha fazlasıyla oluşturulan modern, duyarlı web siteleri"
+            },
+            "mobile": {
+                "title": "Mobil Uygulamalar",
+                "desc": "Flutter ve React Native ile çapraz platform mobil uygulamalar"
+            },
+            "maintenance": {
+                "title": "Hata Düzeltme & Bakım",
+                "desc": "Düzenli bakımla uygulamalarınızı sorunsuz çalıştırın"
+            },
+            "marketing": {
+                "title": "Dijital Pazarlama",
+                "desc": "SEO ve sosyal medya pazarlaması ile çevrimiçi varlığınızı büyütün"
+            }
+        },
+        "process": {
+            "title": "Nasıl Çalışıyoruz",
+            "step1": {
+                "title": "Keşif",
+                "desc": "İhtiyaçlarınızı, hedeflerinizi ve hedef kitlenizi araştırıp anlıyoruz"
+            },
+            "step2": {
+                "title": "Tasarım",
+                "desc": "Markanıza uygun, kullanıcı dostu ve güzel tasarımlar oluşturuyoruz"
+            },
+            "step3": {
+                "title": "Geliştirme",
+                "desc": "Modern teknolojiler ve en iyi uygulamalarla çözümünüzü oluşturuyoruz"
+            },
+            "step4": {
+                "title": "Lansman",
+                "desc": "Her şeyin mükemmel çalıştığını dağıtıyoruz, test ediyoruz ve doğruluyoruz"
+            }
+        },
+        "cta": {
+            "title": "Projenize Başlamaya Hazır mısınız?",
+            "subtitle": "Birlikte harika bir şey inşa edelim",
+            "button": "İletişime Geçin"
+        }
+    },
+    "about": {
+        "title": "Hakkımda",
+        "subtitle": "Yazılım Geliştirici & Teknoloji Tutkunu",
+        "story": {
+            "title": "Hikayem",
+            "p1": "Ben Mowlid, Türkiye'de yaşayan tutkulu bir yazılım geliştiriciyim. Modern web ve mobil uygulamalar geliştirme konusunda uzmanım.",
+            "p2": "Teknoloji yolculuğum, şeylerin nasıl çalıştığına dair bir merakla başladı ve bu beni bilgisayar bilimi öğrenmeye ve gerçek dünya projeleri geliştirmeye yöneltti.",
+            "p3": "Bugün, işletmelerin ve bireylerin dijital fikirlerini temiz, verimli kod ve güzel tasarımlarla hayata geçirmelerine yardımcı oluyorum.",
+            "more": "Devamını Oku"
+        },
+        "stats": {
+            "projects": "Projeler",
+            "experience": "Yıl Deneyim",
+            "clients": "Müşteri Memnuniyeti",
+            "tech": "Teknolojiler"
+        },
+        "journey": {
+            "student": {
+                "title": "Öğrenci & Öğrenen",
+                "description": "Programlama öğrenmeye ve küçük projeler oluşturmaya başladım"
+            },
+            "projects": {
+                "title": "Gerçek Projeler",
+                "description": "Gerçek müşteriler ve işletmeler için web siteleri ve uygulamalar oluşturdum"
+            },
+            "company": {
+                "title": "Mowla Tech",
+                "description": "Daha fazla işletmeye yardımcı olmak için kendi geliştirme stüdyomu kurdum"
+            }
+        },
+        "projects": {
+            "title": "Seçili Projeler",
+            "cafe": "Kafe Web Sitesi",
+            "butcher": "Kasap Dükkanı",
+            "finance": "Finans Uygulaması",
+            "construction": "İnşaat Sitesi"
+        },
+        "values": {
+            "title": "Değerlerim",
+            "subtitle": "Beni olağanüstü dijital deneyimler yaratmaya yönelten şeyler",
+            "passion": {
+                "title": "Tutku",
+                "desc": "Yaptığım işi seviyorum ve bu her projede kendini gösteriyor"
+            },
+            "quality": {
+                "title": "Kalite",
+                "desc": "Her zaman temiz kod ve piksel mükemmel tasarımlar"
+            },
+            "innovation": {
+                "title": "Yenilik",
+                "desc": "Geleceği inşa etmek için en son teknolojileri kullanma"
+            },
+            "speed": {
+                "title": "Hız",
+                "desc": "Kaliteden ödün vermeden hızlı teslimat"
+            }
+        },
+        "cta": {
+            "text": "Birlikte Çalışalım",
+            "button": "Bana Ulaşın"
+        }
+    },
+    "contact": {
+        "title": "İletişime Geçin",
+        "subtitle": "Aklınızda bir proje mi var? Size nasıl yardımcı olabileceğimizi konuşalım.",
+        "form": {
+            "title": "Mesaj Gönderin",
+            "name": {
+                "label": "Adınız",
+                "placeholder": "Adınızı girin"
+            },
+            "email": {
+                "label": "E-posta Adresiniz",
+                "placeholder": "E-posta adresinizi girin"
+            },
+            "message": {
+                "label": "Mesajınız",
+                "placeholder": "Projeniz hakkında bilgi verin..."
+            },
+            "success": {
+                "title": "Mesaj Gönderildi!",
+                "message": "Bizimle iletişime geçtiğiniz için teşekkürler. En kısa sürede size dönüş yapacağız.",
+                "button": "Başka Mesaj Gönder"
+            }
+        }
+    },
+    "footer": {
+        "description": "Dünya genelinde işletmeler için modern dijital çözümler oluşturuyoruz.",
+        "quickLinks": "Hızlı Bağlantılar",
+        "home": "Anasayfa",
+        "services": "Hizmetler",
+        "about": "Hakkımızda",
+        "contact": "İletişim",
+        "rights": "Tüm hakları saklıdır."
     }
 }

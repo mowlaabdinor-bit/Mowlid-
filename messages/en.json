@@ -8,5 +8,177 @@
         "about": "About",
         "contact": "Contact",
         "getQuote": "Get Quote"
+    },
+    "hero": {
+        "title": "We Build Digital",
+        "titleHighlight": "Experiences",
+        "subtitle": "Modern web & mobile solutions for your business",
+        "description": "From concept to launch, we create stunning digital products that drive results and delight users.",
+        "cta1": "Start a Project",
+        "cta2": "Learn More"
+    },
+    "servicesPreview": {
+        "web": "Web Development",
+        "mobile": "Mobile Apps",
+        "maintenance": "Maintenance",
+        "marketing": "Digital Marketing"
+    },
+    "services": {
+        "title": "Our Services",
+        "subtitle": "Comprehensive digital solutions tailored to your needs",
+        "viewAll": "View All Services",
+        "web": {
+            "title": "Web Development",
+            "description": "Modern, responsive websites built with the latest technologies"
+        },
+        "mobile": {
+            "title": "Mobile Apps",
+            "description": "Cross-platform mobile applications for iOS and Android"
+        },
+        "maintenance": {
+            "title": "Bug Fixing & Maintenance",
+            "description": "Keep your applications running smoothly with regular updates"
+        },
+        "marketing": {
+            "title": "Digital Marketing",
+            "description": "Grow your online presence with targeted marketing strategies"
+        },
+        "list": {
+            "web": {
+                "title": "Web Development",
+                "desc": "Modern, responsive websites built with React, Next.js and more"
+            },
+            "mobile": {
+                "title": "Mobile Apps",
+                "desc": "Cross-platform mobile applications with Flutter and React Native"
+            },
+            "maintenance": {
+                "title": "Bug Fixing & Maintenance",
+                "desc": "Keep your applications running smoothly with regular maintenance"
+            },
+            "marketing": {
+                "title": "Digital Marketing",
+                "desc": "Grow your online presence with SEO and social media marketing"
+            }
+        },
+        "process": {
+            "title": "How We Work",
+            "step1": {
+                "title": "Discovery",
+                "desc": "We research and understand your needs, goals, and target audience"
+            },
+            "step2": {
+                "title": "Design",
+                "desc": "We create beautiful, user-friendly designs that match your brand"
+            },
+            "step3": {
+                "title": "Development",
+                "desc": "We build your solution using modern technologies and best practices"
+            },
+            "step4": {
+                "title": "Launch",
+                "desc": "We deploy, test, and ensure everything works perfectly"
+            }
+        },
+        "cta": {
+            "title": "Ready to Start Your Project?",
+            "subtitle": "Let's build something amazing together",
+            "button": "Get in Touch"
+        }
+    },
+    "about": {
+        "title": "About Me",
+        "subtitle": "Software Developer & Tech Enthusiast",
+        "story": {
+            "title": "My Story",
+            "p1": "I'm Mowlid, a passionate software developer based in Turkey. I specialize in building modern web and mobile applications.",
+            "p2": "My journey in tech started with a curiosity for how things work, which led me to pursue computer science and develop real-world projects.",
+            "p3": "Today, I help businesses and individuals bring their digital ideas to life with clean, efficient code and beautiful designs.",
+            "more": "Read More"
+        },
+        "stats": {
+            "projects": "Projects",
+            "experience": "Years Experience",
+            "clients": "Client Satisfaction",
+            "tech": "Technologies"
+        },
+        "journey": {
+            "student": {
+                "title": "Student & Learner",
+                "description": "Started learning programming and building small projects"
+            },
+            "projects": {
+                "title": "Real Projects",
+                "description": "Built websites and apps for real clients and businesses"
+            },
+            "company": {
+                "title": "Mowla Tech",
+                "description": "Founded my own development studio to help more businesses"
+            }
+        },
+        "projects": {
+            "title": "Selected Projects",
+            "cafe": "Cafe Website",
+            "butcher": "Butcher Shop",
+            "finance": "Finance App",
+            "construction": "Construction Site"
+        },
+        "values": {
+            "title": "My Values",
+            "subtitle": "What drives me to create exceptional digital experiences",
+            "passion": {
+                "title": "Passion",
+                "desc": "I love what I do and it shows in every project"
+            },
+            "quality": {
+                "title": "Quality",
+                "desc": "Clean code and pixel-perfect designs, always"
+            },
+            "innovation": {
+                "title": "Innovation",
+                "desc": "Using the latest technologies to build the future"
+            },
+            "speed": {
+                "title": "Speed",
+                "desc": "Fast delivery without compromising quality"
+            }
+        },
+        "cta": {
+            "text": "Let's Work Together",
+            "button": "Contact Me"
+        }
+    },
+    "contact": {
+        "title": "Get in Touch",
+        "subtitle": "Have a project in mind? Let's talk about how we can help you.",
+        "form": {
+            "title": "Send a Message",
+            "name": {
+                "label": "Your Name",
+                "placeholder": "Enter your name"
+            },
+            "email": {
+                "label": "Your Email",
+                "placeholder": "Enter your email"
+            },
+            "message": {
+                "label": "Your Message",
+                "placeholder": "Tell us about your project..."
+            },
+            "success": {
+                "title": "Message Sent!",
+                "message": "Thank you for reaching out. We'll get back to you soon.",
+                "button": "Send Another"
+            }
+        }
+    },
+    "footer": {
+        "description": "Building modern digital solutions for businesses worldwide.",
+        "quickLinks": "Quick Links",
+        "home": "Home",
+        "services": "Services",
+        "about": "About",
+        "contact": "Contact",
+        "rights": "All rights reserved."
     }
 }

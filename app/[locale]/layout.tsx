@@ -1,88 +1,69 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, unstable_setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import Script from 'next/script';
-import { Metadata } from 'next';
+import { locales } from '@/i18n';
+import { Inter, Poppins } from 'next/font/google'
+import '../globals.css'
+import Footer from '@/components/Footer'
+import { ThemeProvider } from '@/components/ThemeContext'
+import DockNavigation from '@/components/DockNavigation'
+import Navigation from '@/components/Navigation'
+import Logo from '@/components/Logo'
 
-export const metadata: Metadata = {
-    title: {
-        default: 'Mowla Tech - Mowlid Abdinor',
-        template: '%s | Mowla Tech'
-    },
-    description: 'Personal portfolio of Mowlid Abdinor (Mowla Tech), a Full Stack Developer specializing in modern web technologies. Expert in React, Next.js, and Node.js.',
-    keywords: ['mowlatech', 'mowlid abdinor', 'mowla abdinor', 'web developer', 'full stack developer', 'software engineer', 'next.js developer', 'react developer', 'somali developer', 'mowlid'],
-    authors: [{ name: 'Mowlid Abdinor', url: 'https://mowlatech.site' }],
-    creator: 'Mowlid Abdinor',
-    publisher: 'Mowla Tech',
-    robots: {
-        index: true,
-        follow: true,
-        googleBot: {
-            index: true,
-            follow: true,
-            'max-video-preview': -1,
-            'max-image-preview': 'large',
-            'max-snippet': -1,
-        },
-    },
-    openGraph: {
-        type: 'website',
-        locale: 'en_US',
-        url: 'https://mowlatech.site',
-        title: 'Mowla Tech - Mowlid Abdinor | Full Stack Developer',
-        description: 'Explore the portfolio of Mowlid Abdinor (Mowla Tech). Innovative web solutions, creative designs, and professional software development.',
-        siteName: 'Mowla Tech',
-        images: [
-            {
-                url: '/og-image.jpg', // We should probably verify if this exists or use a placeholder, but for now this is standard structure
-                width: 1200,
-                height: 630,
-                alt: 'Mowla Tech - Mowlid Abdinor',
-            },
-        ],
-    },
-    twitter: {
-        card: 'summary_large_image',
-        title: 'Mowla Tech - Mowlid Abdinor',
-        description: 'Personal portfolio of Mowlid Abdinor (Mowla Tech).',
-        creator: '@mowlatech', // Assuming this handle, can be changed
-        images: ['/og-image.jpg'],
-    },
-    verification: {
-        google: '6RKM77SoC4HhO1na90piAGORy_a8MZXGqvZQaS_j1V4',
-    },
-};
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+})
 
-// Can be imported from a shared config
-const locales = ['en', 'tr'];
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-poppins',
+  display: 'swap',
+})
 
-export default async function LocaleLayout({ children, params: { locale } }: { children: React.ReactNode, params: { locale: string } }) {
-    unstable_setRequestLocale(locale);
-    // Validate that the incoming `locale` parameter is valid
-    if (!locales.includes(locale as any)) notFound();
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 
-    // Receive messages provided in `i18n.ts` or loaded manually
-    const messages = await getMessages();
+export default async function LocaleLayout({
+  children,
+  params: { locale }
+}: {
+  children: React.ReactNode;
+  params: { locale: string };
+}) {
+  if (!locales.includes(locale as any)) {
+    notFound();
+  }
 
-    return (
-        <html lang={locale}>
-            <body>
-                <Script
-                    src="https://www.googletagmanager.com/gtag/js?id=G-8CET5EKJPS"
-                    strategy="afterInteractive"
-                />
-                <Script id="google-analytics" strategy="afterInteractive">
-                    {`
-                        window.dataLayer = window.dataLayer || [];
-                        function gtag(){dataLayer.push(arguments);}
-                        gtag('js', new Date());
-                        gtag('config', 'G-8CET5EKJPS');
-                    `}
-                </Script>
-                <NextIntlClientProvider locale={locale} messages={messages}>
-                    {children}
-                </NextIntlClientProvider>
-            </body>
-        </html>
-    );
+  unstable_setRequestLocale(locale);
+
+  const messages = await getMessages();
+
+  return (
+    <html lang={locale} className={`${inter.variable} ${poppins.variable}`} suppressHydrationWarning>
+      <body className="font-sans antialiased bg-gray-100 dark:bg-dark-900 transition-colors duration-300">
+        <ThemeProvider>
+          <NextIntlClientProvider messages={messages}>
+            {/* Mobile Navigation - visible only on small screens */}
+            <div className="md:hidden">
+              <Navigation />
+            </div>
+            {/* Logo - now responsive for all screens */}
+            <Logo />
+            <main className="min-h-screen">
+              {children}
+            </main>
+            <Footer />
+            {/* Desktop Dock - visible only on medium+ screens */}
+            <div className="hidden md:block">
+              <DockNavigation />
+            </div>
+          </NextIntlClientProvider>
+        </ThemeProvider>
+      </body>
+    </html>
+  )
 }
