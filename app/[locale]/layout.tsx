@@ -48,7 +48,7 @@ export const metadata: Metadata = {
         images: ['/og-image.jpg'],
     },
     verification: {
-        google: 'verification_token', // Placeholder, user needs to provide real one if they have it, otherwise this structure is ready
+        google: '6RKM77SoC4HhO1na90piAGORy_a8MZXGqvZQaS_j1V4',
     },
 };
 
