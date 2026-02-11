@@ -56,6 +56,10 @@ export const metadata: Metadata = {
 // Can be imported from a shared config
 const locales = ['en', 'tr'];
 
+export function generateStaticParams() {
+    return locales.map((locale) => ({ locale }));
+}
+
 export default async function LocaleLayout({ children, params: { locale } }: { children: React.ReactNode, params: { locale: string } }) {
     // Validate that the incoming `locale` parameter is valid
     if (!locales.includes(locale as any)) notFound();
