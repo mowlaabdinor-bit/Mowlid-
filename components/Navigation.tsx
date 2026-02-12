@@ -35,10 +35,10 @@ export default function Navigation() {
   }
 
   const navLinks = [
-    { href: `/${locale}`, label: t('home') },
-    { href: `/${locale}/services`, label: t('services') },
-    { href: `/${locale}/about`, label: t('about') },
-    { href: `/${locale}/contact`, label: t('contact') },
+    { href: '/', label: t('home') },
+    { href: '/services', label: t('services') },
+    { href: '/about', label: t('about') },
+    { href: '/contact', label: t('contact') },
   ]
 
   const languages = [
