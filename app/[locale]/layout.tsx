@@ -27,6 +27,14 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
+export const metadata = {
+  icons: {
+    icon: '/logo.jpeg',
+    shortcut: '/logo.jpeg',
+    apple: '/logo.jpeg',
+  },
+}
+
 export default async function LocaleLayout({
   children,
   params: { locale }
