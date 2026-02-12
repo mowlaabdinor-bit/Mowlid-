@@ -33,6 +33,9 @@ export const metadata = {
     shortcut: '/logo.jpeg',
     apple: '/logo.jpeg',
   },
+  verification: {
+    google: '6RKM77SoC4HhO1na90piAGORy_a8MZXGqvZQaS_j1V4',
+  },
 }
 
 export default async function LocaleLayout({
