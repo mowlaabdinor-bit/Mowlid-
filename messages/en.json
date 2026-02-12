@@ -91,9 +91,9 @@
         "subtitle": "Software Developer & Tech Enthusiast",
         "story": {
             "title": "My Story",
-            "p1": "I'm Mowlid, a passionate software developer based in Turkey. I specialize in building modern web and mobile applications.",
-            "p2": "My journey in tech started with a curiosity for how things work, which led me to pursue computer science and develop real-world projects.",
-            "p3": "Today, I help businesses and individuals bring their digital ideas to life with clean, efficient code and beautiful designs.",
+            "p1": "Hi! I’m Mowlid Abdinor. Originally from Somalia, I am a software developer and a technology enthusiast currently pursuing my degree at Mehmet Akif Ersoy University. My journey started with a degree in Internet and Network Technologies, which gave me a deep understanding of system infrastructure. Now, I am about to complete my studies in Information Systems and Technologies.",
+            "p2": "I combine my technical background with modern software solutions to build professional projects. I don’t just write code; I build digital solutions including Web Development (Designing and coding user-friendly, fast, and modern web interfaces) and Mobile App Development (Creating high-performance applications for both Android and iOS).",
+            "p3": "Here are the tools and languages I use to bring ideas to life: C#, JavaScript, Python, PHP, ASP.NET Core, React, HTML5, CSS3, Flutter / React Native, MySQL, Firebase, Network Management. I am truly passionate about my work. For me, transforming complex problems into simple and elegant software is more than just a job—it’s a mission.",
             "more": "Read More"
         },
         "stats": {
